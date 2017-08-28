@@ -1,0 +1,60 @@
+body {
+    font-family: Helvetica, sans-serif, Arial;
+}
+input[type='text'] {
+    border:none;
+    background-color: #FFFFFF;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.75em;
+}
+input[type='submit'], button {
+    background-color: teal;
+    border: none;
+    color:white;
+    font-family: inherit;
+    font-weight: normal;
+    padding: 0.5%;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 1.5px rgba(100, 100, 100, 1);
+    -webkit-box-shadow: 3px 3px 1.5px rgba(100, 100, 100, 1);
+    -moz-box-shadow: 3px 3px 1.5px rgba(100, 100, 100, 1);
+    transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
+}
+input[type='submit']:hover, button:hover {
+    box-shadow: none;
+}
+div.outputPanel {
+    font-family: inherit;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+.outputPanel li {
+    list-style: none;
+}
+.inputPanel {
+    padding:1%;
+}
+.outputPanel {
+    padding:1%;
+}
+div.emptyListMessage {
+    font-style: italic;
+    font-size:0.9em;
+}
+button.danger {
+    background-color: rgba(190, 0, 0, 1);
+}
+strike {
+    text-decoration: line-through;
+}
+ul, li {
+    transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+}
+.selectedDisplay {
+    color:teal;
+}
