@@ -1,0 +1,91 @@
+body {
+    font-family: Helvetica, sans-serif, Arial;
+    background-color: rgba(0, 0, 0, 1);
+    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+    color:white;
+}
+table {
+    border: 1px solid white;
+    width:85%;
+    transition: all 1s ease-in;
+    -webkit-transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    background-color: black;
+    font-family: consolas;
+}
+td, th {
+    padding: 0.5%;
+}
+.even {
+    background-color: skyblue;
+    color: rgba(50, 5, 5, 1);
+}
+.odd {
+    background-color: wheat;
+    color: rgba(0, 0, 0, 1);
+}
+.center-align {
+    text-align: center;
+}
+.input-form {
+    background-color: rgba(10, 10, 10, 1);
+    color: orange;
+    padding: 0.5%;
+    line-height: 1.4;
+    width:50%;
+    box-shadow: 3px 3px 1.5px rgba(0, 0, 0, 1);
+    border: 1px solid darkgray;
+}
+.input-label {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: end;
+}
+input[type='text'], input[type='number'] {
+    border: none;
+    font-size: 1.2em;
+    padding: 0.5%;
+}
+.full-width-button {
+    width:100%;
+    border: none;
+}
+.full-width-input {
+    width:100%;
+    border:none;
+}
+.product-display {
+    margin-top: 1%;
+}
+button, input[type='submit'] {
+    text-transform: uppercase;
+    font-weight:bold;
+    background-color: rgba(0, 255, 0, 0.25);
+    padding: 1%;
+    font-family: consolas;
+    color: white;
+    font-size: 1em;
+}
+.danger {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+hr {
+    border: 1px solid darkgrey;
+}
+#left-pane {
+    width: 50%;
+    float: left;
+}
+#right-pane {
+    width:45%;
+    margin-left: 51%;
+}
+.right-align {
+    text-align: right;
+}
+.boldText {
+    font-weight: bold;
+}
+input.ng-invalid {
+    background: rgb(153, 95, 95);
+}

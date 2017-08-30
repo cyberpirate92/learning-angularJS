@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Product Catalog </title>
+    <!--<script src="../angular.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="scripts/sampleapp.samplecontroller.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div data-ng-app="SampleApp" data-ng-controller="SampleController" id="container">
+        <h2 class="center-align"> Catalog </h2>
+        <div id="left-pane">
+            <div class="input-form">
+                <h3 class="center-align"> Add </h3>
+                <hr>
+                <form data-ng-submit="addProduct()" name="ProductAdditionForm">
+                    <div><span class='input-label'>Name</span></div>
+                    <input type="text" data-ng-model="product.name" class="full-width-input" id="product_name" required> <br>
+                    <span class='input-label'>Price</span><br>
+                    <input type="number" data-ng-model="product.price" class="full-width-input" required> <br>
+                    <span class='input-label'>Category</span><br>
+                    <input type="text" data-ng-model="product.category" class="full-width-input" required> <br>
+                    <hr>
+                    <input type="submit" value="Add Product" class="full-width-button"><br>
+                </form> 
+                <button data-ng-show="products.length>0" data-ng-click="clearProducts()" class="full-width-button danger">Clear All</button><br>
+            </div>
+        </div>
+        <div class="product-display" id="right-pane">
+            <table border="3">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                </tr>
+                <tr>
+                    <td data-ng-show="products.length==0" colspan="3" class="center-align">No Products yet :)</td>
+                </tr>
+                <tr data-ng-show="products.length>0" data-ng-repeat="product in products">
+                    <td data-ng-class="{even: $even, odd: $odd}">{{product.name | uppercase }}</td>
+                    <td data-ng-class="{even: $even, odd: $odd}">{{product.price | currency:'₹' }}</td>
+                    <td data-ng-class="{even: $even, odd: $odd}">{{product.category | lowercase }}</td>
+                </tr>
+                <tr>
+                    <td colspan="3" data-ng-show="products.length>0" class="right-align">Total = <span class="boldText">{{ total_price | currency:'₹'}}</span></td>
+                </tr>
+            </table>
+            <table ng-show="products.length > 0">
+                <tr>
+                    <th>Maximum</th>
+                    <td class="right-align">{{maximum_price | currency:'₹'}}</td>
+                </tr>
+                <tr>
+                    <th>Minimum</th>
+                    <td class="right-align">{{minimum_price | currency:'₹'}}</td>
+                </tr>
+                <tr>
+                    <th>Average</th>
+                    <td class="right-align">{{average_price | currency:'₹' }}</td>
+                </tr>
+            </table>
+            <table ng-show="products.length > 0">
+                <tr>
+                    <th>Categories</th>
+                </tr>
+                <tr ng-repeat="category in categories">
+                    <td class="center-align">{{category}}</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</body>
+</html>
