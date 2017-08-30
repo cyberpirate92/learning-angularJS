@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Github User explorer</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/app.controller.js"></script>
+
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+    <div id="container" ng-app="UserExplorerApp" ng-controller="UserController">
+        <div>
+            <form data-ng-submit="searchUser()" name="SearchForm">
+                <input type="text" ng-model="search_query" class="mega_input" placeholder="Type here.." required>
+                <input type="submit" value="Search!">
+            </form>
+            <button ng-click="clearAll()" ng-hide="users.length == 0">Clear Results</button>
+        </div>
+        <div>
+            <p ng-show="users.length>0">{{users.length}} users found</p>
+            <div id="searchResults">
+                <div ng-repeat="user in users" class="profile_card" ng-click="navigate(user)">
+                    <div class="profile_picture">
+                        <img ng-src="{{user.avatar_url}}"/>
+                    </div>
+                    <div class="profile_details">
+                        <div ng-show="user.name" class="bold"> {{user.name}} </div>
+                        <div ng-if="user.name == null" class="bold"> {{user.login}} </div>
+                        <div> <span class="bold underline"> Repositories:</span> {{user.public_repos}} </div>
+                        <div> <span class="bold underline"> Followers:</span> {{user.followers }} </div>
+                    </div>
+                    <div class="user_bio" ng-show="user.bio">
+                        <span class="bold underline"> Bio:</span> {{user.bio}} <br>
+                    </div>
+                    <div ng-show="user.bio.length == null" class="inactive user_bio">
+                            Apparently, this user prefers to keep an air of mystery about them.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

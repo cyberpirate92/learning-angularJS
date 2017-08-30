@@ -1,0 +1,57 @@
+body {
+    font-size: 1em;
+    font-family: Helvetica, sans-serif;
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/food.png");
+}
+
+.profile_picture img {
+    border: 2px solid black;
+    width: 60px;
+    height: 60px;
+    margin-right:3%;
+    float: left;
+}
+
+.profile_card {
+    margin:1%;
+    background: #EEE;
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+    font-family: consolas;
+    padding: 1%;
+    width:15%;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    -webkit-transition: all .5s ease-in;
+    min-width: 250px;
+    min-height: 125px;
+    float:left;
+    box-shadow: 3px 3px 3px;
+}
+
+.profile_card:hover {
+    box-shadow: 3px 3px 5px;
+    background-color: #FFF;
+}
+
+.user_bio {
+    margin-top: 1%;
+    font-size: 0.9em;
+    clear: both;
+}
+
+.inactive {
+    font-style: italic;
+    color:gray;
+}
+.bold {
+    font-weight: bold;
+}
+.underline {
+    text-decoration: underline;
+}
+.mega_input {
+    font-size: 1.3em;
+}
