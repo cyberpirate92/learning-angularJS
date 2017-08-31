@@ -2,7 +2,7 @@ body {
     font-size: 1em;
     font-family: Helvetica, sans-serif;
     background-color: #ffffff;
-    background-image: url("https://www.transparenttextures.com/patterns/food.png");
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
 .profile_picture img {
@@ -15,7 +15,7 @@ body {
 
 .profile_card {
     margin:1%;
-    background: #EEE;
+    background-color: #EEE;
     background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
     font-family: consolas;
     padding: 1%;
@@ -25,15 +25,17 @@ body {
     transition: all 1s ease-in;
     -moz-transition: all 1s ease-in;
     -webkit-transition: all .5s ease-in;
-    min-width: 250px;
-    min-height: 125px;
+    min-width: 275px;
+    min-height: 200px;
     float:left;
     box-shadow: 3px 3px 3px;
+    overflow: hidden;
 }
 
 .profile_card:hover {
-    box-shadow: 3px 3px 5px;
+    box-shadow: 3px 3px 6px #888;
     background-color: #FFF;
+    background-position: right bottom;
 }
 
 .user_bio {
@@ -54,4 +56,50 @@ body {
 }
 .mega_input {
     font-size: 1.3em;
+    box-shadow: 1px 1px 3px #FFF;
+    border: none;
+}
+#input-panel {
+    background: rgba(0, 0, 0, 1);
+    padding: 0.75%;
+}
+#container {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+}
+.follower_card {
+    border: 1px solid black;
+    font-family: consolas;
+    transition: all 0.5s ease-in-out;
+}
+.follower_card:hover {
+    background-color: #CCC;
+}
+.white-text {
+    color: white;
+}
+.full-width {
+    width: 100%;
+}
+.right-align {
+    text-align: right;
+}
+.pointer {
+    cursor: pointer;
+}
+div.follower-pane {
+    border: 2px inset black;
+    padding: 1px;
+}
+div.follower-pane img {
+    vertical-align: middle;
+}
+div {
+    transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
 }
